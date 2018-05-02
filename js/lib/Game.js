@@ -18,6 +18,10 @@ class Game {
       img.src = src
     })
   }
+
+  Pixels () {
+    return this.ctx.getImageData(0, 0, this.width, this.height)
+  }
   clear (color = 'rgba(0,0,0,0)') {
     this.ctx.fillStyle = color
     this.ctx.fillRect(0, 0, this.width, this.height)
